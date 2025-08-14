@@ -1,4 +1,4 @@
-import ExpertCard from '../../components/ExpertCard';
+import ExpertCard from '@/components/ExpertCard';
 
 async function getExperts() {
   const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
