@@ -16,7 +16,7 @@ export default function Home() {
           </div>
 
           <div>
-            <img src="topgridre-logo.jpg" alt="Top GridRE logo" className="h-56 w-auto" />
+            <img src="/topgridre-logo.jpg" alt="Top GridRE logo" className="h-56 w-auto" />
           </div>
         </div>
       </section>
