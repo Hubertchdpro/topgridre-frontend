@@ -38,6 +38,7 @@ const handleSubmit = async (event) => {
     }
   } catch (error) {
     // Erreur réseau ou autre
+    console.log("error detected:", error)
     alert('Erreur de réseau. Impossible d\'envoyer le message.');
   }
 };
