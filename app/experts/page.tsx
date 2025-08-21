@@ -2,8 +2,11 @@ import ExpertCard from '@/components/ExpertCard';
 
 async function getExperts() {
   try{
+    console.log("je vais chercher les experts");
     const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+    console.log("base URL:", base);
     const res = await fetch(`${base}/api/public/experts`);
+    console.log("fetch experts res", res);
     if (!res.ok) return [];
     console.log("je recois une reponse de l'API experts", res);
     return res.json();
