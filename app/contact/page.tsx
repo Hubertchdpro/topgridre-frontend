@@ -2,7 +2,7 @@
 
 export default function ContactPage() {
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || 'https://topgridre-backend-vbud.onrender.com';
 
 const handleSubmit = async (event) => {
   event.preventDefault(); // Empêche le rechargement de la page
@@ -18,7 +18,7 @@ const handleSubmit = async (event) => {
   };
 
   try {
-    const response = await fetch(`${BACKEND_URL}api/leads`, {
+    const response = await fetch(`${BACKEND_URL}/api/leads`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // Important de préciser le format JSON

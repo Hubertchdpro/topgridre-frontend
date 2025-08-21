@@ -1,10 +1,22 @@
 import ExpertCard from '@/components/ExpertCard';
 
+
 async function getExperts() {
-  const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-  const res = await fetch(`${base}/api/public/experts`);
-  if (!res.ok) return [];
-  return res.json();
+  try {
+    const base = process.env.NEXT_PUBLIC_API_URL || 'https://topgridre-backend-vbud.onrender.com';
+    const res = await fetch(`${base}/api/public/experts`, {
+      cache: 'no-store'
+    });
+    if (!res.ok) {
+      console.error('Failed to fetch experts:', res.status);
+      return [];
+    }
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error('Error fetching experts:', error);
+    return [];
+  }
 }
 
 export default async function ExpertsPage() {
