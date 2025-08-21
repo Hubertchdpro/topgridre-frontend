@@ -5,6 +5,7 @@ async function getExperts() {
     const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
     const res = await fetch(`${base}/api/public/experts`);
     if (!res.ok) return [];
+    console.log("je recois une reponse de l'API experts", res);
     return res.json();
   } catch(error){
     console.log("fetch experts faile , error")
