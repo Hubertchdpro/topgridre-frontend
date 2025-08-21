@@ -18,7 +18,7 @@ const handleSubmit = async (event) => {
   };
 
   try {
-    const response = await fetch(`${BACKEND_URL}/api/leads`, {
+    const response = await fetch(`${BACKEND_URL}api/leads`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // Important de préciser le format JSON
