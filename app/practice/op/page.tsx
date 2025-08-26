@@ -1,22 +1,36 @@
+"use client"
 
-export default function cipPage(){
+import NavBar from "@/components/NavBar";
+import Slider from "@/components/slider";
+
+export default function opPage(){
+  
+    const slides = [
+        "/img1.jpeg",
+        "/img2.jpeg",  
+        "/img3.jpeg",
+    ];
+
+
     return (
-        <main className="p-8">
-            <h1 className="text-2xl font-bold">CIP Practice</h1>
-            <p>Welcome to the CIP practice area.</p>
-            <div className="div_parent">
+      
+        <main className="p-8 bg-red-100 ">
+              {/* Slider sous la navbar */}
+                {/* <Slider slides={slides} /> */}
+            <h1 className="text-2xl font-bold">OP Practice</h1>
+            <p>Welcome to the OP practice area.</p>
+
+
+             <div className="div_parent">
                 <div className="item">
-                    <h1>Energy Auditing & Optimization</h1>
+                    <h1>Energy Optimization Practice (OP)</h1>
                     <p>Description: <br />
-                        Conduct comprehensive energy audits to identify inefficiencies and optimize energy consumption. This includes evaluating building systems, 
-                        industrial processes, and equipment performance to reduce waste and cut costs.
+                        Our Energy Optimization Practice focuses on helping organizations reduce energy consumption, 
+                        improve operational efficiency, and achieve sustainability goals. Through advanced audits, 
+                        renewable energy integration, and energy management systems, 
+                        we deliver data-driven strategies to minimize costs and environmental impact
                     </p>
-                    <p>
-                        Benefits: <br />
-                        Lower operational energy costs
-                        Reduced carbon footprint
-                        Data-driven decision making
-                    </p>
+                    
                 </div>
 
                 <div className="item">
