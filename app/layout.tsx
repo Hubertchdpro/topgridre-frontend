@@ -7,26 +7,28 @@ export const metadata = {
   description: 'Power Is Yours. Compliance Is Ours.'
 };
 
-if (process.env.UNDER_DEVELOPMENT === 'true') {
-  // If not under development, export a simple layout
-  export default function RootLayout({ children }: { children: React.ReactNode }) {
-    return (
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-    );
-  }
-  return;
-}else{
-    export default function RootLayout({ children }: { children: React.ReactNode }) {
-    return (
-      <html lang="en">
-        <body>
-          <NavBar />
-          {children}
-          <Footer />
-        </body>
-      </html>
-    );
-  }
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const isUnderDevelopment = process.env.UNDER_DEVELOPMENT === 'true';
+  return (
+    <html lang="en">
+      <body>
+        { isUnderDevelopment ? (
+          <div>
+              {children}
+          </div>
+          //<div className="bg-yellow-200 text-yellow-800 p-4 text-center">
+          //<strong>Notice:</strong> The site is currently under development. Some features may not be available. </div>
+          )
+            :(
+              <div>
+                <NavBar />
+                {children}
+                <Footer />
+              </div>
+            )}
+      </body>
+    </html>
+  );
 }
+
