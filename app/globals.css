@@ -1,3 +1,13 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-white text-neutral-900 font-sans; }
+
+.btn { @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold bg-brand text-white shadow; }
+.card { @apply rounded-2xl border border-neutral-200 p-6 bg-white; } */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,3 +16,6 @@ body { @apply bg-white text-neutral-900 font-sans; }
 
 .btn { @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold bg-brand text-white shadow; }
 .card { @apply rounded-2xl border border-neutral-200 p-6 bg-white; }
+.item {@apply rounded-2xl border border-neutral-200 p-4 bg-white w-1/2; }
+.item h1 { @apply text-center font-bold text-lg mb-2; }
+.div_parent{ @apply flex flex-row gap-4 ; }
